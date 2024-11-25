@@ -1,0 +1,12 @@
+<h1><%= title %></h1>
+<ul>
+  <% messages.forEach((msg, index) => { %>
+  <li>
+    <strong><%= msg.user %>:</strong> <%= msg.text %>
+    <em>(<%= msg.added.toLocaleString() %>)</em>
+  </li>
+  <a href="/message/<%= index %>">Open</a>
+
+  <% }); %>
+</ul>
+<a href="/new">Add a new message</a>
